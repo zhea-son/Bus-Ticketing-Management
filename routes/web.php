@@ -54,10 +54,11 @@ Route::resource('schedules', SchedulesController::class);
 
 
 // Bookings Routes
-Route::get('/search_buses', [BookingsController::class, 'show_search']);
+Route::get('/search_buses', [BookingsController::class, 'show_search'])->name('search_buses');
 Route::post('/search', [BookingsController::class, 'search']);
 Route::post('/booking', [BookingsController::class, 'booking'])->middleware('auth');
 Route::post('/bookings', [BookingsController::class, 'store'])->middleware('auth');
+Route::delete('/bookings/{booking}', [BookingsController::class, 'destroy'])->middleware('auth');
 Route::get('/my_bookings', [BookingsController::class, 'my_bookings'])->name('my_bookings')->middleware('auth');
 
 /* Company Routes */
