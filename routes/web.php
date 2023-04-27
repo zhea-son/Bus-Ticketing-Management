@@ -36,7 +36,7 @@ Route::get('/', [PagesController::class, 'home'])->name('pages.home');
 Route::get('/about', [PagesController::class, 'about'])->name('pages.about');
 Route::get('/signup', [PagesController::class, 'sign_up'])->name('pages.sign_up')->middleware('guest');
 Route::get('/login', [PagesController::class, 'login'])->name('pages.login')->middleware('guest');
-Route::get('/live', [SchedulesController::class, 'live'])->name('pages.live');
+Route::get('/live', [PagesController::class, 'live'])->name('pages.live');
 
 
 // User Routes
@@ -48,6 +48,7 @@ Route::post('/user/logout', [UserController::class, 'logout'])->name('users.logo
 
 // Resource Controller Routes
 Route::resource('buses', BusesController::class);
+Route::get('/buses', [BusesController::class, 'index'])->name('pages.buses');
 
 Route::resource('routes', RoutesController::class);
 
@@ -92,6 +93,8 @@ Route::get('/company/routes', [CompanyController::class, 'my_routes'])->name('co
 Route::get('/company/schedules', [CompanyController::class, 'my_schedules'])->name('company.schedules');
 
 Route::get('/company/trips', [CompanyController::class, 'my_trips'])->name('company.trips');
+
+Route::get('/company/profile', [CompanyController::class, 'my_profile'])->name('company.profile');
 
 
 

@@ -95,6 +95,9 @@ class CompanyController extends Controller
     public function my_routes(){
         $company = Auth::guard('company')->user();
         $routes = Route::where('company_id',$company->id)->get();
+        foreach($routes as $route){
+            
+        }
         return view('company.routes', ['company' => $company], compact('routes'));
     }
 
@@ -129,5 +132,14 @@ class CompanyController extends Controller
             'company' => $company,
     ], compact('schedules'));
     }
+
+    public function my_profile(){
+        $company = Auth::guard('company')->user();
+        return view('company.profile', [
+            'company' => $company,
+        ]);
+    }
+
+    
 
 }

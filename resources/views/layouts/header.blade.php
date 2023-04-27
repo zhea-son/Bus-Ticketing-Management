@@ -16,8 +16,10 @@
                     
                 </form>
 
-                @else
+                {{-- @elseif(middleware('company'))
+                <button type="button" class="text-white bg-teal-600 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 "><a href={{ route('company.dashboard') }}>Dashboard</a></button> --}}
 
+                @else
                 <button type="button" class="text-white bg-teal-600 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 "><a href={{ route('pages.login') }}>Log In</a></button>
                 <button type="button" class="ml-2 text-white bg-teal-600 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 "><a href={{ route('pages.sign_up') }}>Sign Up</a></button>
                 
@@ -44,6 +46,10 @@
                     <li>
                         <a href="{{ route('my_bookings') }}"
                             class="block py-2 pl-3 pr-4 {{ Route::currentRouteName() == 'my_bookings' ? 'text-teal-500' : 'text-gray-700' }} rounded hover:bg-gray-100 md:hover:bg-transparent">My Bookings</a>
+                    </li>
+                    <li>
+                        <a href="/buses"
+                            class="block py-2 pl-3 pr-4 {{ Route::currentRouteName() == 'pages.buses' ? 'text-teal-500' : 'text-gray-700' }} rounded hover:bg-gray-100 md:hover:bg-transparent">Buses</a>
                     </li>
                     <li>
                         <button class="inline-block relative">
