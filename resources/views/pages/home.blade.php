@@ -9,7 +9,10 @@
 
     <div class="flex flex-col text-center w-full mb-12">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-teal-700">Bus Ticketing and Transport Management</h1>
-        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+          Welcome to our Bus ticketing and Transport Management System. Experience seamless travel with our state-of-the-art platform
+          that revolutionizes the way you book and manage your bus tickets. Whather your're a frequent traveler  
+        </p>
       </div>
       @auth
 
